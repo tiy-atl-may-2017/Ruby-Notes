@@ -1,20 +1,21 @@
 numbers = [1,2,3,4,5]
+#total is the first index (or numbers[0]) of the array and el is the second
  output = numbers.reduce do |total, el|
    puts total
    puts el
-  total += el * el
+  total += el
  end
 
 puts output
-# numbers down here breaks
-# numbers = [1,2,3,4,5]
+#numbers down here breaks
+numbers = [1,2,3,4,5]
 
 # total is 5 and el loops through all of the numbers in the array
 numbers = [1,2,3,4,5]
  output = numbers.reduce(5) do |total, el|
    puts total
    puts el
-  total += el * el
+  total += el
  end
 
 puts output
@@ -51,8 +52,11 @@ class Casey < Human
   end
 end
 
+# New Instance of Casey Class
 casey = Casey.new(300, 5.5)
 puts casey.weight
 puts casey.height
+
+# set casey eyecolor
 casey.eyecolor = "blue"
 puts casey.eyecolor
